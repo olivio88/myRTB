@@ -1,0 +1,1094 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.mainFrame {
+    margin-top: 25vh;
+    display: flex;
+    width: 100%;
+    height: 855px;
+}
+
+.main {
+    font-family: "Truculenta";
+    margin-left: 40px;
+    padding-left: 40px;
+    margin-right: 40px;
+    padding-right: 40px;
+    display: flex;
+    width: 100%;
+    height: 845px;
+    border-radius: 15px;
+    background: #a7dcfe;
+    flex-direction: column;
+}
+
+.keterangan {
+    margin-left: 25px;
+    padding-left: 20px;
+    color: red;
+}
+
+/* FORM DROPDOWN */
+.dropdown {
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 60%;
+    height: 80px;
+    display: relative;
+    z-index: 2;
+}
+
+.dropdown {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.dropbtn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(233, 233, 233);
+    color: black;
+    font-size: 1rem;
+    border: none;
+    height: 100%;
+    border-radius: 15px;
+    width: 100%;
+    align-items: center;
+}
+
+.btnForm {
+    padding-left: 0.625rem;
+    font-size: 40px !important;
+}
+
+.dropbtn:hover {
+    background-color: #d8efff;
+}
+
+.dropdown-content {
+    visibility: collapse;
+    top: 6.2rem;
+    flex-direction: column;
+    display: flex;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    z-index: 2;
+    height: 240px;
+    width: 100%;
+    flex-grow: 150px;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-content::-webkit-scrollbar {
+    width: 0px;
+}
+
+.dropdown {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.formBtn {
+    background: rgb(233, 233, 233);
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 0.625rem 0.625rem 0px rgba(0, 0, 0, 0.2);
+    margin-top: 1.25%;
+    color: black;
+    padding: 1.25% 7.125%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    font-size: 35px;
+    font-family: "Truculenta";
+    text-align: left;
+    justify-content: flex-start;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.formBtn:hover {
+    background-color: #d8efff;
+}
+
+.dropdown-content a:hover {
+    background-color: D8EFFF;
+}
+
+.show {
+    visibility: visible;
+}
+
+.collapse {
+    visibility: collapse;
+}
+
+
+/* SHEET PART */
+.sheetPart {
+    padding-top: 32.5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    display: flex;
+    width: calc(100% - 80px);
+    height: 590px;
+    border-radius: 15px;
+    border: none;
+    background: white;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.lpart {
+    display: flex;
+    flex-direction: column;
+}
+
+.alert {
+    visibility: hidden;
+    font-size: 20px;
+    width: 100%;
+    padding-left: 40%;
+    color: red;
+}
+
+.format {
+    margin-left: 4%;
+    margin-right: 2%;
+    width: 45%;
+}
+
+.formIjin {
+    height: 35px !important;
+}
+
+.formNama {
+    height: 5px !important;
+    display: inline-block;
+    font-size: 1.5rem !important;
+}
+
+.form {
+    font-size: 2.1875rem;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.generalTB {
+    align-items: center;
+    margin-left: 0.625rem;
+    height: 50px;
+    width: 90%;
+    background: #d9d9d9;
+    font-family: "Truculenta";
+    border: none;
+    border-radius: 15px;
+    font-size: 2.1875rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+}
+
+.generalTB:hover {
+    background: #d8efff;
+}
+
+.tb {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.triangle,
+.triangleClass,
+.triangleResponsible {
+    display: flex;
+    margin: 10px 10px 10px 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.dodot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* CLASS PART */
+.tbClass {
+    display: relative;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.ClassDropbtn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    background-color: #d9d9d9;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    height: 50px;
+    border-radius: 15px;
+    width: 90%;
+    align-items: center;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.classBtn {
+    background: #d9d9d9;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 2.1875rem;
+    text-align: left;
+    justify-content: flex-start;
+    width: 99%;
+    cursor: pointer;
+    padding-left: 3px;
+}
+
+.classBtn:hover {
+    background: #d8efff;
+}
+
+.ClassBtnForm {
+    padding-left: 0.625rem;
+    font-size: 2.5rem !important;
+}
+
+.classDropdown-content {
+    visibility: collapse;
+    margin-left: 10px;
+    flex-direction: column;
+    padding-left: 0px;
+    display: flex;
+    border-radius: 15px;
+    position: absolute;
+    z-index: 3;
+    height: 250px;
+    width: 49%;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.classDropdown-content::-webkit-scrollbar {
+    width: 0px;
+}
+
+.ClassDropbtn:hover {
+    background-color: #d8efff;
+}
+
+.classDropdown-content a:hover {
+    background-color: white;
+}
+
+
+/* RESPONSIBLE PART */
+.tbResponsible {
+    display: relative;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.ResponsibleDropbtn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    background-color: #d9d9d9;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    height: 50px;
+    border-radius: 15px;
+    width: 90%;
+    align-items: center;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.responsibleBtn {
+    background: #d9d9d9;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 2.1875rem;
+    text-align: left;
+    justify-content: flex-start;
+    width: 99%;
+    cursor: pointer;
+    padding-left: 3px;
+}
+
+.responsibleBtn:hover {
+    background: #d8efff;
+}
+
+.ResponsibleBtnForm {
+    padding-left: 0.625rem;
+    font-size: 2.5rem !important;
+}
+
+.responsibleDropdown-content {
+    visibility: collapse;
+    margin-left: 10px;
+    flex-direction: column;
+    padding-left: 0px;
+    display: flex;
+    border-radius: 15px;
+    position: absolute;
+    z-index: 3;
+    height: 100px;
+    width: 49%;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.responsibleDropdown-content::-webkit-scrollbar {
+    width: 0px;
+}
+
+.ResponsibleDropbtn:hover {
+    background-color: #d8efff;
+}
+
+.responsibleDropdown-content a:hover {
+    background-color: white;
+}
+
+.show {
+    visibility: visible;
+}
+
+.collapse {
+    visibility: collapse;
+}
+
+
+
+/* SUBMIT PART */
+.submitPart {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 38px;
+}
+
+.submitBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #48b7ff;
+    width: 14%;
+    height: 50px;
+    border: none !important;
+    border-radius: 30px;
+}
+
+.submitBtn:hover {
+    background: #d8efff;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    body {
+        max-width: 100%;
+    }
+
+    .mainFrame {
+        margin-top: 25vh;
+        display: flex;
+        width: 100%;
+        height: 775px;
+    }
+
+    .main {
+        width: 100%;
+        height: 775px;
+        border-radius: 15px;
+    }
+
+    .keterangan {
+        margin-left: 22px;
+        padding-left: 11px;
+    }
+
+    .triangle,
+    .triangleClass,
+    .triangleResponsible {
+        margin: 0.1125rem 0.7375rem 0.1125rem 0.7375rem;
+        width: 20px;
+        height: 20px;
+    }
+
+    .dropdown {
+        margin-top: 40px;
+        margin-left: 40px;
+        width: 55%;
+        height: 64px;
+    }
+
+    .dropbtn {
+        font-size: 0.8rem;
+        height: 100%;
+        border-radius: 15px;
+        width: 97.65%;
+        padding-left: 10px;
+    }
+
+    .btnForm {
+        font-size: 30px !important;
+    }
+
+    .dropdown-content {
+        top: 6.2rem;
+        height: 240px;
+        width: 100%;
+    }
+
+    .dropdown {
+        border-radius: 15px;
+    }
+
+    .formBtn {
+        border-radius: 15px;
+        margin-top: 1.25%;
+        padding: 1.25% 7.125%;
+        height: 80px;
+        font-size: 25px;
+    }
+
+    .sheetPart {
+        padding-top: 25px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 20px;
+        width: calc(100% - 80px);
+        height: 530px;
+        border-radius: 15px;
+    }
+
+    .alert,
+    .alert1 {
+        font-size: 17px;
+        width: 50%;
+        padding-left: 40%;
+    }
+
+    .alert1 {
+        padding-left: 5%;
+    }
+
+    .format {
+        margin-left: 4%;
+        margin-right: 2%;
+        width: 45%;
+    }
+
+    .form,
+    .generalTB {
+        font-size: 1.5rem;
+    }
+
+    .generalTB {
+        height: 45px;
+        width: 90%;
+        border-radius: 15px;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    }
+
+    .tb {
+        width: 100%;
+    }
+
+    /* Class Part */
+    .tbClass {
+        width: 100%;
+    }
+
+    .ClassDropbtn {
+        font-size: 0.8rem;
+        height: 45px;
+        border-radius: 15px;
+        width: 90%;
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+
+    .classBtn {
+        height: 50px;
+        font-size: 1.2rem;
+        width: 98.7%;
+        padding-left: 3px;
+        border-radius: 10px;
+    }
+
+    .classDropdown-content {
+        margin-left: 10px;
+        width: 46.5%;
+        height: 250px;
+    }
+
+    .ClassBtnForm {
+        font-size: 2rem;
+    }
+
+    /* Submit Part */
+    .submitBtn {
+        width: 14%;
+        height: 50px;
+        border-radius: 30px;
+    }
+
+    /* Date Picker Part */
+    .tbResponsible {
+        width: 100%;
+        height: 50px;
+    }
+
+    .ResponsibleDropbtn {
+        font-size: 0.6rem;
+        height: 45px;
+        border-radius: 15px;
+        width: 90%;
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+
+    .ResponsibleBtnForm {
+        font-size: 1.8rem;
+    }
+
+    .responsibleDropdown-content {
+        margin-left: 10px;
+        width: 170px;
+        height: 220px;
+    }
+
+    .datepicker {
+        max-width: 175px;
+        border-radius: 15px;
+    }
+
+    .headerDatePicker {
+        display: flex;
+    }
+
+    table {
+        width: 100%;
+        padding-left: 5px;
+    }
+
+    td {
+        padding: 4.2px;
+    }
+
+    .prev {
+        margin-left: 5px;
+    }
+
+    .next {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 955px) {
+    .mainFrame {
+        margin-top: 20vh;
+    }
+}
+
+@media (max-width: 760px) {
+    .formBtn {
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .dropdown-content {
+        height: 170px;
+    }
+}
+
+@media (max-width: 885px) {
+    .formBtn {
+        height: 40px;
+        font-size: 25px;
+    }
+    .dropdown-content{
+        height: auto;
+    }
+    
+    .form,
+    .generalTB,
+    .ResponsibleBtnForm,
+    .ClassBtnForm {
+        font-size: 1.3rem !important;
+    }
+    
+    .triangle,
+    .triangleClass,
+    .triangleResponsible {
+        margin: 0.3125rem 0.9375rem 0.3125rem 0.9375rem;
+        width: 15px;
+        height: 15px;
+    }
+
+    .generalTB {
+        height: 35px;
+        width: 90%;
+        border-radius: 15px;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    }
+
+    .ClassDropbtn,
+    .ResponsibleDropbtn,
+    .tbResponsible {
+        height: 35px;
+    }
+
+    .ClassBtnForm,
+    .ResponsibleBtnForm {
+        font-size: 1.3rem;
+    }
+
+    .classBtn {
+        height: 50px;
+        font-size: 1.2rem;
+        width: 98.3%;
+        padding-left: 3px;
+        border-radius: 10px;
+    }
+
+    .classDropdown-content {
+        margin-left: 10px;
+        width: 43.95%;
+        height: 250px;
+    }
+
+    .responsibleBtn {
+        height: 30px;
+        font-size: 1.2rem;
+        width: 98.3%;
+        padding-left: 3px;
+        border-radius: 15px;
+    }
+
+    .responsibleDropdown-content {
+        margin-left: 10px;
+        width: 43.95%;
+        height: 132px;
+    }
+
+    .btnForm {
+        padding: 0px;
+    }
+
+    .alert,
+    .alert1 {
+        font-size: 15px;
+    }
+
+    .submitBtn {
+        border-radius: 25px;
+    }
+
+    .submitPart {
+        margin-top: 30px;
+    }
+
+    .keterangan {
+        margin-left: 17px;
+        padding-left: 7px;
+    }
+
+    .sheetPart {
+        height: 430px;
+    }
+
+    .main,
+    .mainFrame {
+        height: 655px;
+    }
+}
+
+@media (max-width: 820px) {
+
+    .form,
+    .generalTB {
+        font-size: 1.1rem;
+    }
+
+    .sheetPart {
+        width: calc(100% - 65px);
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-right: 15px;
+        padding-left: 15px;
+        height: 420px;
+        margin-top: 10px;
+    }
+
+    .alert {
+        font-size: 1rem;
+    }
+
+    .dropdown {
+        margin-left: 20px;
+        height: 60px;
+    }
+
+    .submitPart {
+        margin-top: 35px;
+    }
+
+    .main, .mainFrame {
+        height: 630px;
+    }
+
+    .list{
+        height: 30px;
+    }
+
+    .submitBtn {
+        border-radius: 20px;
+        font-size: 1rem;
+    }
+
+    .btnForm {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 735px) {
+    .dropdown {
+        width: 70%;
+        height: 40px;
+        margin-top: 30px;
+    }
+
+    .keterangan {
+        font-size: 15px;
+        padding: 2px;
+    }
+
+    .sheetPart {
+        padding-top: 17px;
+        height: 400px;
+    }
+
+    .main, .mainFrame {
+        height: 567px;
+    }
+
+    .list {
+        height: 35px;
+    }
+
+    .submitPart {
+        margin-top: 32px;
+    }
+
+    .alert {
+        font-size: 10px;
+    }
+
+    .format {
+        align-items: center !important;
+    }
+
+    .btnForm {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 640px) {
+    .btnForm, .formBtn {
+        padding-left: 5px;
+        font-size: 20px !important;
+    }
+
+    .dropbtn {
+        width: 97.8%;
+    }
+    
+    .dropdown {
+        width: 92.6%;
+    }
+
+    .list {
+        flex-direction: column;
+        height: 50px;
+    }
+    
+    .lpart {
+        height: 100px;
+    }
+
+    .dodot {
+        height: 0px;
+        visibility: hidden;
+    }
+
+    .format {
+        justify-content: flex-start;
+        text-align: left;
+        margin: 0px;
+        display: flex;
+        width: 94.5%;
+    }
+
+    .form {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .sheetPart {
+        height: 475px;
+    }
+
+    .keterangan {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        padding-left: 14px;
+        height: 20px;
+    }
+
+    .listKet {
+        height: 30px !important;
+    }
+
+    .alert {
+        height: 20px;
+        padding-top: 13px;
+        padding-left: 20px;
+        width: 70%;
+    }
+
+    .alert1 {
+        padding-top: 5px;
+    }
+
+    /* Submit Part */
+    .submitBtn {
+        width: 25%;
+        height: 30px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+
+    .submitPart {
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .classBtn, .responsibleBtn, .permissionBtn {
+        height: 40px !important;
+        font-size: 1.2rem;
+        width: 98.3%;
+        padding-left: 3px;
+        border-radius: 10px;
+    }
+
+    .classDropdown-content, .responsibleDropdown-content, .permissionDropdown-content {
+        margin-left: 10px;
+        width: 61%;
+        height: 240px;
+    }
+
+    .responsibleDropdown-content, .permissionDropdown-content{
+        height: auto;
+    }
+
+    .ClassDropbtn,
+    .ResponsibleDropbtn, .PermissionDropbtn {
+        width: 90%;
+    }
+
+    .sheetPart {
+        height: 610px;
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+
+    .lpart {
+        height: 95px !important;
+    }
+
+    .alertResponsibleText, .alertResponsibleText {
+        margin-top: 6px;
+    }
+
+    .alertNameText {
+        margin-bottom: 20px;
+    }
+
+    .main,
+    .mainFrame {
+        height: 785px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .ClassDropbtn,
+    .ResponsibleDropbtn, .PermissionDropbtn {
+        width: 89%;
+    }
+
+    .triangle, .triangleClass, .triangleResponsible, .trianglePermission {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .dropdown {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .btnForm{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .dropbtn {
+        width: 96.8%;
+    }
+
+    .submitBtn {
+        width: 30%;
+    }
+
+    .submitPart {
+        margin-top: 53px;
+        width: 107%;
+    }
+
+    .classBtn, .responsibleBtn, .permissionBtn {
+        height: 40px !important;
+        font-size: 1.2rem;
+        width: 97.8%;
+        padding-left: 3px;
+        border-radius: 10px;
+    }
+
+    .classDropdown-content, .responsibleDropdown-content, .permissionDropdown-content {
+        margin-left: 10px;
+        width: 53.5%;
+        height: 240px;
+    }
+
+    .generalTB {
+        margin-left: 9px;
+    }
+
+    .ClassDropbtn,
+    .ResponsibleDropbtn, .PermissionDropbtn {
+        margin-left: 9px;
+        width: 84.5%;
+        padding-left: 15px;
+    }
+
+    .form,
+    .generalTB {
+        font-size: 1.1rem;
+    }
+
+    .formIjin {
+        font-size: 1rem !important;
+    }
+
+    .alertResponsibleText {
+        padding-top: 14px;
+    }
+
+    .sheetPart {
+        margin-top: 5px;
+        margin-left: 0px;
+        margin-right: 10px;
+        width: calc(100% - 30px) !important;
+        height:630px;
+    }
+
+    .alert1 {
+        margin-left: 5px;
+    }
+
+    .form, .generalTB {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .main, .mainFrame{
+        height: 775px;
+    }
+    .classBtn, .responsibleBtn, .permissionBtn {
+        height: 40px !important;
+        font-size: 1.2rem;
+        width: 97.2%;
+        padding-left: 3px;
+        border-radius: 10px;
+    }
+
+    .classDropdown-content, .responsibleDropdown-content, .permissionDropdown-content {
+        margin-left: 7px;
+        width: 61%;
+        height: 240px;
+    }
+
+    .responsibleDropdown-content, .permissionDropdown-content{
+        height: auto;
+    }
+
+    .generalTB {
+        margin-left: 9px;
+    }
+
+    .ClassDropbtn,
+    .ResponsibleDropbtn, .PermissionDropbtn {
+        margin-left: 9px;
+        width: 88%;
+    }
+    .submitPart {
+        margin-top: 47px;
+    }
+}
