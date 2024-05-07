@@ -1,0 +1,566 @@
+:root{
+    --primary: #A7DCFE;
+    --secondary: #6DC6FE;
+    --lightAccentV1: #EDEDED;
+    --lightAccentV2: #D8EFFF;
+    --lightAccentV3: rgb(0, 102, 255);
+    --darkAccentV1: #C0C0C0;
+    --darkAccentV2: #D8EFFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-size: 70px;
+    font-family: 'BebasNeue';
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0px;
+}
+.mainCol{
+    margin-top: 25vh;
+    width: 100%;
+}
+.shapeMainCol{
+    margin: 20px 40px;
+    padding: 30px 30px;
+    height: 100%;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 25px;
+}
+.containerMain{
+    width: 100%;
+    padding-bottom: 30px;
+    height: auto;
+    display: grid;
+    gap: 2.5%;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: 70px auto 40px;
+}
+@media(max-width: 955px){
+    .mainCol{
+        margin-top: 20vh;
+    }
+    .containerMain{
+        gap: 1%;
+        padding-bottom: 50px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px auto auto 40px;
+    }
+}
+@media(max-width: 400px){
+    .shapeMainCol{
+        margin: 10px 20px;
+        padding: 20px 20px 50px 20px;
+    }
+}
+
+/* MAIN CONTENT */
+.gridTitle{
+    grid-area: 1/1/3/3;
+    font-family: 'BebasNeue';
+    font-size: 50px;
+    text-align: center;
+}
+.containerBiodata{
+    grid-area: 2/1/4/2;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightAccentV1);
+    padding: 20px;
+    border-radius: 25px;
+}
+@media(max-width: 955px){
+    .gridTitle{
+        grid-area: 1/1/2/3;
+    }
+    .containerBiodata{
+        grid-area: 2/1/3/3;
+    }
+}
+.cardPart{
+    padding: 5px;
+    border-bottom: 2px solid black;
+}
+.partBiodata{
+    padding: 20px 0px 20px 5px;
+}
+.labelBiodatas,
+.txtBiodatas{
+    font-size: 23px;
+}
+.profileBox{
+    display: flex;
+    padding-top: 5px;
+    width: 100%;
+}
+.profilePic{
+    width: 135px;
+    margin-right: 5%;
+}
+.profilePic img{
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    clip-path: circle(50% at 50% 50%);
+}
+.userProfile{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+.userProfile h4{
+    font-family: 'BebasNeue';
+    font-weight: 300;
+    font-size: 40px;
+}
+.btnActMed{
+    padding: 2%;
+    border: none;
+    box-shadow: 
+    0 1px 5px #fff,
+    inset 0 -1px 2px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+    inset 0 1px 2px rgba(255,255,255,0.8); /*top internal highlight*/
+    border-radius: 10px;
+    font-family: 'Merriweather Sans';
+    transition: all ease-in-out 0.25s;
+}
+#btnChangePic{
+    width: fit-content;
+    background-color: var(--lightAccentV2);
+    color: var(--lightAccentV3);
+}
+#btnChangePic:hover{
+    cursor: pointer;
+    color: var(--lightAccentV2);
+    background-color: var(--lightAccentV3);
+}
+@media(max-width: 360px){
+    .profileBox{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .userProfile{
+        justify-content: center;
+        align-items: center;
+    }
+    .userProfile h4{
+        text-align: center;
+    }
+    #btnChangePic{
+        width: 100%;
+    }
+}
+
+/* INFORMASI PERSONAL */
+.personalGrid{
+    height: 300px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 4fr 3fr 2fr;
+    grid-template-rows: auto repeat(3, 1fr);
+    font-family: 'calibri';
+}
+.personalGrid h5,
+.addressGrid h5{
+    font-size: 30px;
+    grid-column: 1/3;
+}
+.containerData{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.containerData:nth-child(odd){
+    grid-column: span 2;
+}
+.btnActSm{
+    cursor: pointer;
+    padding: 2%;
+    width: 70%;
+    transition: all ease-in-out 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnActSm p{
+    font-size: 15px;
+}
+.btnEdit{
+    grid-area: 1/3/2/4;
+    justify-self: end;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-family: 'Merriweather Sans';
+    font-weight: lighter;
+}
+.btnEdit:hover{
+    color: var(--lightAccentV2);
+    background-color: var(--lightAccentV3);
+}
+.icon-margin{
+    margin-right: 5px;
+}
+.labelBiodatas{
+    font-family: 'calibri';
+    font-weight: bold;
+    font-size: 23px;
+}
+.txt-box{
+    width: 80%;
+    padding-left: 5px;
+    font-family: 'calibri', sans-serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+    border-bottom: 1px solid black;
+    transition: all ease-in-out 0.25s;
+}
+#input-email:focus,
+#input-phone:focus{
+    border: 2px solid var(--lightAccentV3);
+    outline: none;
+}
+.error{
+    font-family: 'calibri', sans-serif;
+    color: red;
+    font-size: 16px;
+}
+@media(max-width: 1024px){
+    .labelBiodatas{
+        font-size: 18px;
+    }
+    .txtBiodatas{
+        font-size: 20px;
+    }
+}
+@media(max-width: 955px){
+    .personalGrid h5,
+    .addressGrid h5{
+        font-size: 35px;
+    }
+    .labelBiodatas{
+        font-size: 25px;
+    }
+    .txtBiodatas{
+        font-size: 25px;
+    }
+}
+@media(max-width: 600px){
+    .personalGrid{
+        height: 500px;
+        grid-template-columns: 5fr 1fr;
+        gap: 1%;
+        grid-template-rows: auto repeat(6, 1fr);
+    }
+    .personalGrid h5,
+    .addressGrid h5{
+        font-size: 28px;
+        grid-column: 1/2;
+    }
+    .btnActSm p{
+        display: none;
+    }
+    .btnEdit{
+        width: auto;
+        padding: 5px 10px;
+        grid-area: 1/2/2/3;
+    }
+    .icon-margin{
+        margin-right: 0px;
+    }
+    .labelBiodatas{
+        font-size: 20px;
+    }
+    .txtBiodatas{
+        font-size: 23px;
+    }
+    .txt-box{
+        width: 80%;
+        padding-left: 5px;
+        font-family: 'calibri', sans-serif;
+        font-size: 20px;
+        border: none;
+        border-radius: 3px;
+        border-bottom: 1px solid black;
+        transition: all ease-in-out 0.25s;
+    }
+    #input-email:focus,
+    #input-phone:focus{
+        border: 2px solid var(--lightAccentV3);
+        outline: none;
+    }
+    .error{
+        font-family: 'calibri', sans-serif;
+        color: red;
+        font-size: 16px;
+    }
+}
+@media(max-width: 360px){
+    .personalGrid h5,
+    .addressGrid h5{
+        font-size: 23px;
+    }
+}
+
+/* ALAMAT GRID */
+.addressGrid{
+    height: 250px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 3fr 2fr;
+    grid-template-rows: auto repeat(3, 1fr);
+    font-family: 'calibri';
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.containerData2{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.containerData2:nth-child(even),
+.containerData2:last-child{
+    grid-column: span 2;
+}
+#edit-address{
+    width: 100%;
+}
+@media(max-width: 600px){
+    .addressGrid{
+        height: 400px;
+        grid-template-columns: 4fr 2fr;
+        grid-template-rows: auto repeat(5, 1fr);
+    }
+    #edit-address{
+        width: auto;
+        padding: 5px 10px;
+    }
+}
+
+/* RECENT ACTIVITIES */
+.gridRecentAct{
+    grid-area: 2/2/3/3;
+}
+.containerRecent{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightAccentV2);
+    padding: 20px;
+    border-radius: 25px;
+    overflow-y: hidden;
+    height: 95%;
+    font-family: 'calibri';
+}
+.containerRecent h4{
+    font-family: 'BebasNeue';
+    font-weight: 300;
+    font-size: 40px;
+}
+.containerItemRecent{
+    border-top: 5px solid var(--lightAccentV3);
+    height: 600px;
+    overflow-y: scroll;
+}
+.containerItemRecent::-webkit-scrollbar {
+    width: 0px;
+}
+.recentItem{
+    margin-top: 5px;
+    padding: 5px 2px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.itemTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+.itemDesc{
+    font-size: 22px !important;
+}
+.recentItem:last-child{
+    border-bottom: none;
+}
+.containerButton{
+    display: flex;
+    width: auto;
+    column-gap: 10px;
+    align-items: center;
+}
+.containerButton button{
+    font-family: 'Merriweather Sans', sans-serif;
+}
+.btnRecentMd{
+    width: 100px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    transition: all ease-in-out 0.25s;
+}
+.tanggalActivity{
+    width: 150px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+}
+.btnCancel{
+    border: 2px solid red;
+    background-color: white;
+    cursor: pointer;
+}
+.btnCancel:hover{
+    background-color: red;
+}
+.statusPerbaikan{
+    text-align: center;
+    box-shadow: 
+    0 1px 5px #fff, /*bottom external highlight*/
+    0 -1px 5px #fff, /*top external highlight*/
+    inset 0 -1px 2px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+    inset 0 1px 2px rgba(255,255,255,0.8); /*top internal highlight*/
+    width: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.status-selesai{
+    background-color: greenyellow;
+    width: auto;
+    font-size: 16px;
+}
+.status-dijadwalkan{
+    background-color: rgb(235, 255, 51);
+    width: auto;
+    font-size: 16px;
+}
+.status-ditunda{
+    background-color: rgb(237, 103, 19);
+    width: auto;
+    font-size: 16px;
+}
+.status-belum{
+    background-color: rgb(171, 7, 7);
+}
+.status-tanggal{
+    width: auto;
+    font-size: 16px;
+}
+@media(max-width: 955px){
+    .gridRecentAct{
+        grid-area: 3/1/4/3;
+    }
+}
+@media(max-width: 550px){
+    .containerButton{
+        margin-top: 3px;
+        flex-direction: column;
+        align-items: end;
+    }
+    .tanggalActivity{
+        padding-top: 0;
+        padding-right: 0;
+        margin-bottom: 0 !important;
+    }
+    .status-belum{
+        background-color: rgb(171, 7, 7);
+        margin-bottom: 10px;
+    }
+    .btnRecentMd{
+        margin-bottom: 10px;
+    }
+}
+@media(max-width: 450px){
+    .recentItem{
+        flex-direction: column;
+    }
+    .containerButton{
+        align-items: start;
+    }
+    .tanggalActivity{
+        text-align: left;
+        padding-top: 0px;
+        padding-left: 0;
+    }
+    .btnRecentMd{
+        margin-bottom: 0;
+    }
+    .statusPerbaikan{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+.btnDetail{
+    border: 2px solid var(--lightAccentV3);
+    background-color: white;
+    cursor: pointer;
+}
+.btnDetail:hover{
+    background-color: var(--lightAccentV3);
+    color: white;
+}
+.btnSelesai{
+    border: 2px solid var(--lightAccentV3);
+    background-color: var(--lightAccentV3);
+    color: white;
+}
+.btnMd{
+    width: 120px;
+    padding: 2px;
+    justify-self: end;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 
+    inset 0 -1px 2px rgba(87, 0, 0, 0.5), /*bottom internal shadow*/ 
+    inset 0 1px 2px rgba(255, 0, 0, 0.8); /*top internal highlight*/
+    border: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+}
+.btnLogout{
+    background-color: white;
+}
+.btnLogout:hover{
+    background-color: red;
+    box-shadow: 
+    inset 0 -1px 2px rgba(0, 0, 0, 0.5), /*bottom internal shadow*/ 
+    inset 0 1px 2px rgba(255, 255, 255, 0.8); /*top internal highlight*/
+}
+.show{
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+.hide{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+.errorBox{
+    border: 2px solid red;
+}
+.containerLegend{
+    display: flex;
+    border-top: 5px solid var(--lightAccentV3);
+    flex-direction: column;
+}
+.containerLegend h5{
+    margin-top: 3px;
+    font-family: 'BebasNeue';
+    font-weight: 300;
+    font-size: 22px;
+}
+.containerStatus{
+    display: flex;
+    padding: 1px 3px;
+    align-items: center;
+    column-gap: 5px;
+}

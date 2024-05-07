@@ -1,0 +1,581 @@
+:root{
+    --primary: #A7DCFE;
+    --secondary: #6DC6FE;
+    --lightAccentV1: #EDEDED;
+    --lightAccentV2: #D8EFFF;
+    --lightAccentV3: rgb(0, 102, 255);
+    --darkAccentV1: #C0C0C0;
+    --darkAccentV2: #D8EFFF;
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(./Font/BebasNeue-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url(./Font/Helvetica.ttf);
+}
+
+@font-face {
+    font-family: 'Nougat-ExtraBlack';
+    src: url(./Font/Nougat-ExtraBlack.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+.header{
+    width: 100%;
+    min-height: 25vh;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.containerHeader{
+    min-height: 10vh;
+    border-radius: 25px;
+    margin: 20px 40px;
+    padding: 0.5vh 3vh 0.5vh 6vh;
+    /* padding: 0.5vh 6vh; */
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#myRTB-logo{
+    width: 130px;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    cursor: pointer;
+}
+#myRTB-logo img{
+    height: 45px;
+}
+#myRTB-logo p{
+    font-size: 45px;
+    font-family: 'Nougat-ExtraBlack', 'Helvetica';
+    font-style: italic;
+    color: white;
+}
+#user-info{
+    width: 250px;
+    height: 100%;
+    /* display: flex; */
+    display: none;
+}
+#user-pic{
+    width: 80px;
+    display: flex;
+    align-items: center;
+}
+#user-pic img{
+    width: 100%;
+    clip-path: circle(50% at 50% 50%);
+    transition: all ease-in-out 0.15s;
+    cursor: pointer;
+}
+#user-pic img:hover{
+    filter: brightness(80%);
+}
+#user-profile{
+    padding-left: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#user-name{
+    position: fixed;
+    top: 33px;
+    transition: all ease-in-out 0.15s;
+    cursor: pointer;
+}
+#user-name:hover{
+    color: rgb(62, 62, 62);
+}
+#user-name p{
+    font-family: 'BebasNeue', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+.user-status{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+}
+.user-status > p{
+    font-family: 'CormorantGaramond' !important;
+    font-weight: lighter !important;
+    font-style: italic !important;
+    font-size: 15px !important;
+}
+#btn-status{
+    margin-left: 5px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--lightAccentV3);
+    background-color: var(--lightAccentV2);
+    border: none;
+    border-radius: 4px;
+    padding: 3px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.loginContainer{
+    height: 45px;
+}
+#btn-login{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'BebasNeue';
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--lightAccentV3);
+    background-color: var(--lightAccentV2);
+    border-radius: 15px;
+    border: none;
+    padding: 5px 10px;
+    padding-left: 12px;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+}
+#btn-login:hover{
+    color: var(--lightAccentV2);
+    background-color: var(--lightAccentV3);
+}
+.containerLast{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.hideBar{
+    display: none !important;
+}
+
+/* .mainCol{
+    height: 50vh;
+} */
+
+.pre-overlay-black{
+    background-color: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+    backdrop-filter: blur(2px);
+    transition: all ease-in-out .35s;
+}
+.pre-overlay-open{
+    opacity: 1;
+    visibility: visible;
+    transition: all ease-in-out .35s;
+}
+
+/* NAVBAR GESER */
+.pre-nav{
+    display: block;
+    width: 0vw;
+    height: 0vh;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    position: absolute;
+    font-family: 'BebasNeue';
+    font-size: 20px;
+    z-index: 111;
+}
+.mobile-menu{
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    visibility: hidden;
+    top: 0;
+    height: 100vh;
+    background-color: white;
+    width: 300px;
+    transform: translateX(200px);
+    transition: transform .25s;
+    z-index: 111;
+}
+.menu-container{
+    width: 100%;
+    padding: 60px 20px;
+}
+.menu-content{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.nav-btn{
+    width: 90%;
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    align-items: center;
+    font-family: 'BebasNeue';
+}
+.fa-caret-right,
+.fa-caret-down{
+    transform: scale(1.25);
+}
+.mobile-menu.menu-hide{
+    visibility: hidden;
+    width: 0;
+}
+.close-btn{
+    position: fixed;
+    display: inline-block;
+    top: 20px;
+    right: 0px;
+    z-index: 999;
+    opacity: 0;
+    transition: all ease-in-out .15s;
+}
+.close-btn-show{
+    opacity: 1;
+    right: 20px;
+    transition: all ease-in-out .15s;
+}
+.menu-show{
+    visibility: visible;
+    transform: translateX(-247px);
+    transition: ease-in-out .25s;
+}
+
+.containerDropdown-mini{
+    width: 100%;
+    padding-left: 10px;
+}
+.label-mini{
+    color: rgb(5, 1, 59);
+    text-decoration: none;
+}
+
+@media (max-width: 955px){
+    .header{
+        min-height: 10vh;
+    }
+    /* CHANGE NAVBAR TO BURGER BAR */
+    #user-info{
+        width: auto;
+        height: 90%;
+    }
+    #user-pic{
+        justify-content: end;
+    }
+    #user-pic img{
+        width: 70%;
+    }
+    #user-profile{
+        display: none;
+    }
+    .hideBar{
+        display: inline-block !important;
+    }
+}
+@media (max-width: 480px){
+    .containerHeader{
+        padding: 0.5vh 3vh;
+    }
+    #myRTB-logo{
+        width: 100px;
+    }
+    #myRTB-logo img{
+        height: 40px;
+    }
+    #myRTB-logo p{
+        font-size: 30px;
+    }
+}
+@media (max-width: 400px){
+    .containerHeader{
+        margin: 20px 20px;
+        padding: 0.5vh 3vh 0.5vh 6vh;
+    }
+    .containerLast{
+        column-gap: 5px;
+    }
+    .loginContainer{
+        height: 35px;
+    }
+    #btn-login{
+        font-size: 16px;
+    }
+    .hideBar{
+        transform: scale(0.75);
+    }
+    #myRTB-logo{
+        width: 85px;
+    }
+    #myRTB-logo img{
+        height: 35px;
+    }
+    #myRTB-logo p{
+        font-size: 28px;
+    }
+}
+
+/* NAVBAR */
+.navBar{
+    width: 100%;
+    padding-bottom: 20px;
+    position: fixed;
+}
+.navBar ul{
+    display: flex;
+    padding: 0 5%;
+    justify-content: space-evenly;
+}
+.navBar li{
+    width: 16%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 13px;
+}
+.containerLinks{
+    background-color: var(--lightAccentV1);
+    padding: 5px 25px;
+    border-radius: 13px;
+    box-shadow: 5px 5px 4px 0 rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+}
+.containerLinks:hover{
+    background-color: var(--darkAccentV2);
+    cursor: pointer;
+}
+.wrapperLinks{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navBar a{
+    width: 100%;
+    color: black;
+    text-decoration: none;
+
+    font-family: 'BebasNeue';
+    font-size: 25px;
+    text-align: center;
+}
+.active{
+    background-color: var(--lightAccentV2);
+}
+.btnDrop{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+.btnDrop img{
+    width: 100%;
+}
+.containerDropdown{
+    margin-top: 3%;
+    height: 0;
+    visibility: collapse;
+}
+.drop-item-fasilitas{
+    margin-bottom: 3%;
+    width: 90%;
+    justify-content: start;
+}
+.drop-item-forms{
+    margin-bottom: 3%;
+    width: 120%;
+    justify-content: start;
+}
+@media (max-width: 1250px) {
+    .navBar li{
+        width: 14%;
+    }
+    .containerLinks{
+        width: 80%;
+    }
+    .navBar a{
+        width: 110%;
+        font-size: 20px;
+    }
+    .btnDrop img{
+        width: 95%;
+    }
+}
+
+@media (max-width: 1040px){
+    .navBar a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 955px){
+    .navBar{
+        display: none;
+    }
+}
+
+/* HELP BUTTON */
+.helpFAQ{
+    position: fixed;
+    z-index: 9999;
+    right: 30px;
+    bottom: 100px;
+    width: 40px;
+    height: 40px;
+}
+.btnHelp{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    border: none;
+    background-color: black;
+    color: var(--lightAccentV1);
+    font-family: 'Truculenta';
+    font-size: 28px;
+    font-weight: bolder;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+}
+.btnHelp:hover{
+    background-color: var(--lightAccentV2);
+    color: black;
+    transition: all ease-in-out 0.25s;
+}
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    min-height: 12vh;
+    bottom: 0;
+}
+.shapeFooter{
+    height: 100%;
+    border-radius: 25px;
+    background-color: var(--lightAccentV1);
+    margin: 10px 40px;
+}
+.containerFooter{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 50px;
+}
+.containerFooter h4{
+    font-family: 'calibri';
+    font-weight: normal;
+    font-size: 18px;
+}
+.containerInFooter{
+    display: flex;
+    justify-content: flex-end;
+    width: 500px;
+    gap: 10px;
+}
+.sosmedIcons{
+    height: 40px;
+}
+.sosmedIcons img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.conFirst{
+    display: flex;
+    justify-content: flex-start;
+}
+@media (max-width: 1040px){
+    .containerFooter h4{
+        font-size: 16px;
+    }
+    .sosmedIcons{
+        height: 30px;
+    }
+}
+@media (max-width: 955px){
+    .containerFooter{
+        flex-direction: column-reverse;
+        row-gap: 10px;
+    }
+    .containerInFooter{
+        text-align: center;
+        width: 100%;
+    }
+    .sosmedIcons{
+        height: 50px;
+    }
+    .containerInFooter{
+        justify-content: center;
+    }
+    .containerFooter h4{
+        font-size: 20px;
+    }
+}
+@media(max-width: 500px){
+    .shapeFooter{
+        margin: 20px 40px;
+    }
+    .containerFooter h4{
+        font-size: 16px;
+    }
+}
+@media(max-width: 400px){
+    .shapeFooter{
+        margin: 10px 20px;
+    }
+    .sosmedIcons{
+        height: 35px;
+    }
+    .containerInFooter{
+        width: auto;
+    }
+    .containerFooter {
+        padding: 10px 20px;
+    }
+    .containerFooter h4{
+        font-size: 14px;
+    }
+    .conFirst{
+        text-align: center;
+    }
+}
+.activeSide{
+    text-decoration: underline;
+    text-decoration-color: var(--lightAccentV3);
+}
+.hide{
+    display: none !important;
+    visibility: collapse;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+}
+.show{
+    /* display: flex; */
+    visibility: visible;
+    opacity: 1;
+    transition: all ease-in-out 0.5s;
+}

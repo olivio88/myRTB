@@ -1,0 +1,363 @@
+@font-face {
+  font-family: 'BebasNeue';
+  src: url(../Font/BebasNeue-Regular.otf);
+}
+
+.mainCol img{
+    border-radius: 50px;
+}
+
+.TentangKami .font{
+    font-family: 'BebasNeue', serif;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.font > h1{
+  font-weight: normal !important;
+  font-size: 60px !important;
+}
+
+.TentangKami .image{
+  padding: 2%;
+}
+
+.TentangKami .font2{
+  font-family: 'calibri';
+  font-size: 32px;
+  padding-top: 2%;  
+  padding-left: 10px;
+  padding-right: 30px;
+  text-align: justify;
+}
+
+.shapeMainCol{
+  margin: 20px 40px;
+  padding: 30px 30px;
+  height: 100%;
+  background-color: #A7DCFE;
+  border: none;
+  border-radius: 25px;
+}
+
+.mainCol{
+  margin-top: 25vh;
+  width: 100%;
+}
+
+@media (max-width: 955px){
+  .mainCol{
+      margin-top: 20vh;
+  }
+}
+@media (max-width: 400px){
+  .shapeMainCol{
+      margin: 10px 20px;
+      padding: 20px 20px;
+  }
+}
+
+.container{
+  width: 100%;
+  height: auto;
+}
+
+.containerContent{
+  display: flex;
+}
+
+.imgPic{
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  gap: 3.5%;
+}
+
+.containerPIC{
+  height: 490px;
+  width: 370px;
+  background-color: white;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.imgPIC{
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+}
+
+.imgPIC img{
+  height: 120%;
+  width: 100%;
+}
+.containerNama{
+  width: 100%;
+  height: 35px;
+  margin-top: 3%;
+}
+
+.namaPIC{
+  font-family: 'BebasNeue', serif;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.statusPIC{
+  font-family: 'calibri', serif;
+  font-size: 20px;
+}
+
+.fontPic{
+  padding: 2%;
+  text-align: center;
+}
+  
+.timRtb{
+  align-items: center;
+}
+
+.fontTim{
+  font-family: 'BebasNeue', serif;
+  text-align: center;
+  padding: 2% 2% 1% 2%;
+}
+
+.containerBigPic{
+  width: 100%;
+  height: 150vh;
+}
+
+.containerBigPic img{
+  width: 100%;
+  height: 100%;
+}
+
+.fontTim > h1{
+  font-weight: normal !important;
+  font-size: 60px !important;
+}
+
+.fontTim2{
+  font-family: 'BebasNeue', serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 1%;
+}
+
+.fontAlign{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
+.rowName{
+  font-size: 40px;
+  font-family: 'calibri';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logoSLP{
+  margin-top: 5%;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+}
+
+.logoSLP img{
+  width: 100%;
+  height: 100%;
+}
+
+.Map{
+  margin-top: 5%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.Map iframe{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.sosmedDanAlamat{
+  margin-top: 2%;
+  padding: 0 1%;
+  width: 98%;
+  display: flex;
+}
+
+.sosmed{
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sosmedItem{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  gap: 2%;
+}
+
+.sosmedItem img{
+  height: 70px;
+  width: 70px;
+}
+
+.sosmedItem h3{
+  font-family: 'calibri', serif;
+  font-size: 35px;
+  font-weight: normal !important;
+}
+
+.alamat h2{
+  font-family: 'BebasNeue', serif;
+  font-size: 50px;
+}
+
+.alamat p{
+  font-family: 'calibri', serif;
+  font-size: 35px;
+  text-align: justify;
+}
+@media(max-width: 950px){
+  .containerContent{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image{
+    width: 100%;
+    height: 60vh;
+  }
+
+  .image img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .TentangKami .font2{
+    font-size: 30px; 
+    padding: 0 10px;
+  }
+  .containerBigPic{
+    height: 80vh;
+  }
+  .rowName{
+    font-size: 30px;
+  }
+  .sosmed{
+    padding-top: 15px;
+    row-gap: 10px;
+  }
+  
+  .sosmedItem{
+    height: 30%;
+  }
+  
+  .sosmedItem img{
+    height: 40px;
+    width: 40px;
+  }
+  
+  .sosmedItem h3{
+    font-size: 30px;
+    font-weight: normal !important;
+  }
+  
+  .alamat p{
+    font-size: 28px;
+  }
+}
+
+@media(max-width: 480px){
+  .font > h1{
+    font-size: 40px !important;
+    text-align: center;
+    margin-top: 5%;
+  } 
+  .fontTim > h1{
+    font-size: 40px !important;
+    text-align: center;
+    margin-top: 5%;
+  } 
+  .image{
+    height: 40vh;
+  }
+  .TentangKami .font2{
+    font-size: 23px;
+  }
+  .imgPic{
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerPIC{
+    width: 80%;
+    height: 300px;
+  }
+  .containerBigPic{
+    height: 40vh;
+  }
+  .imgPIC{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  .imgPIC img{
+    height: auto;
+    width: 100%;
+  }
+  .containerNama{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 5%;
+  }
+  .fontAlign{
+    row-gap: 10px;
+  }
+  .rowName{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .logoSLP{
+    height: 40vh;
+  }
+  .Map{
+    height: 40vh;
+  }
+  .sosmedDanAlamat{
+    flex-direction: column-reverse;
+  }
+  .alamat h2{
+    font-size: 35px;
+    height: 45px;
+  }
+  .alamat p{
+    font-size: 20px;
+  }
+}
+@media(max-width: 360px){
+  .imgPIC img{
+    height: 150%;
+  }
+  .containerBigPic{
+    height: 40vh;
+  }
+}

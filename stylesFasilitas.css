@@ -1,0 +1,723 @@
+:root {
+  --primary: #a7dcfe;
+  --secondary: #6dc6fe;
+  --lightAccentV1: #ededed;
+  --lightAccentV2: #d8efff;
+  --lightAccentV3: rgb(0, 102, 255);
+  --darkAccentV1: #c0c0c0;
+  --darkAccentV2: #d8efff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* isi HTML*/
+.mainCol{
+  margin-top: 25vh;
+  width: 100%;
+}
+.box {
+  display: inline-block;
+  width: 24px;
+  height: 25px;
+  background-color: #00ff75;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 3px;
+  border: 3px solid #0056b3;
+}
+
+.background {
+  top: 0;
+  left: 0;
+  height: calc(auto - 1px);
+  z-index: 0;
+  position: relative;
+  margin: 20px 40px;
+  padding: 30px 30px;
+  height: 100%;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 25px;
+}
+
+@media (max-width: 955px){
+  .mainCol{
+      margin-top: 20vh;
+  }
+}
+@media (max-width: 400px){
+  .background{
+      margin: 10px 20px;
+      padding: 20px 20px;
+  }
+}
+
+.main-content{
+  width: 100%;
+  height: auto;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  color: #000;
+  text-align: justify;
+  font-family: "Truculenta";
+  font-size: 50px;
+  font-style: normal;
+  line-height: normal;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.main-content p {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  font-family: "Truculenta";
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
+.Kios_Talenta {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  text-align: justify;
+  margin-bottom: 5%;
+}
+
+.kiospg {
+  text-align: justify;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.imgkios {
+  display: flex;
+  align-items: center;
+}
+
+.imgkios img {
+  width: 100%;
+  height: 350px;
+  max-width: 100%;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.buttenkios {
+  text-align: right;
+  justify-content: right;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.btnkios {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Truculenta";
+}
+
+.btnkios:hover {
+  background-color: #0056b3;
+}
+
+@media(max-width: 500px) {
+  .box {
+    width: 20px;
+    height: 20px;
+    background-color: #00ff75;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: 3px solid #0056b3;
+  }
+
+  .main-content h1,
+  .main-content h2,
+  .main-content h3,
+  .main-content h4 {
+    padding-top: 0px;
+    font-size: 30px;
+  }
+  
+  .main-content p {
+    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  .Kios_Talenta { 
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 2px;
+  }
+  
+  .kiospg {
+    margin-left: 0px;
+    text-align: left;
+  }
+  
+  .imgkios {
+    display: flex;
+    align-items: start;
+  }
+  
+  .imgkios img {
+    width: 100%;
+    height: 300px;
+    margin-left: 0px;
+  }
+  
+  .buttenkios {
+    width: auto;
+    display: flex;
+    text-align: right;
+    justify-content: left;
+    margin-right: 0px;
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+  
+  .btnkios {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: "Truculenta";
+  }
+}
+
+.Ruang_Serba_Guna {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  text-align: justify;
+  margin-bottom: 5%;
+}
+
+.sergunimg {
+  display: flex;
+  align-items: center;
+}
+
+.sergunimg img {
+  width: 95%;
+  height: 390px;
+  max-width: 100%;
+  border-radius: 40px;
+  box-sizing: border-box;
+
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.sergun {
+  text-align: justify;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.btnsergun {
+  text-align: right;
+  justify-content: right;
+  margin-top: 20px;
+  margin-right: 50px;
+  font-family: "Truculenta";
+}
+
+.btnpeminjamansergun {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Truculenta";
+}
+
+.btnpeminjamansergun:hover {
+  background-color: #0056b3;
+}
+
+.btndetailsergun {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Truculenta";
+}
+
+.btndetailsergun:hover {
+  background-color: #0056b3;
+}
+
+@media(max-width: 500px) {
+  .Ruang_Serba_Guna {
+    margin-top: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 2px;
+  }
+  
+  .sergunimg {
+    display: flex;
+    align-items: center;
+    grid-row: 1/2;
+  }
+  
+  .sergunimg img {
+    width: 100%;
+    height: 300px;
+    margin-left: 0px;
+
+  }
+  
+  .sergun {
+    width: 100%;
+    text-align: right;
+    margin-left: 0px;
+  }
+  .sergun h2{
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .btnsergun {
+    margin-right: 10px;
+  }
+}
+
+.Ruang_Dapur {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  text-align: justify;
+  margin-bottom: 5%;
+}
+
+.dapurimg {
+  display: flex;
+  align-items: center;
+}
+
+.dapurimg img {
+  width: 100%;
+  height: 330px;
+  max-width: 100%;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.dapur {
+  text-align: justify;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.btndapur {
+  text-align: right;
+  justify-content: right;
+  margin-top: 20px;
+  margin-right: 50px;
+  font-family: "Truculenta";
+}
+
+.btnpeminjamandapur {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Truculenta";
+}
+
+.btnpeminjamandapur:hover {
+  background-color: #0056b3;
+}
+
+.btndetaildapur {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Truculenta";
+}
+
+.btndetaildapur:hover {
+  background-color: #0056b3;
+}
+
+@media(max-width: 500px){
+  .Ruang_Dapur {
+    margin-top: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 2px;
+  }
+  
+  .dapurimg {
+    display: flex;
+    align-items: start;
+  }
+  
+  .dapurimg img {
+    width: 100%;
+    height: 300px;
+    margin-left: 0px;
+  }
+  
+  .dapur {
+    margin-left: 0px;
+    text-align: left;
+  }
+  
+  .btndapur {
+    width: auto;
+    display: flex;
+    text-align: right;
+    justify-content: left;
+    margin-right: 0px;
+    margin-top: 10px;
+    padding-left: 10px;
+    column-gap: 10px;
+  }
+}
+
+.Communal {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 5%;
+  text-align: justify;
+}
+
+.communalimg {
+  display: flex;
+  align-items: center;
+}
+
+.communalimg img {
+  width: 95%;
+  height: 390px;
+  max-width: 100%;
+  border-radius: 40px;
+  box-sizing: border-box;
+
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.communalteks {
+  text-align: justify;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.btncommunal {
+  text-align: right;
+  justify-content: right;
+  margin-top: 20px;
+  margin-right: 50px;
+  font-family: "Truculenta";
+}
+
+.btnpeminjamancommunal {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Truculenta";
+}
+
+.btnpeminjamancommunal:hover {
+  background-color: #0056b3;
+}
+
+.btndetailcommunal {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Truculenta";
+}
+
+.btndetailcommunal:hover {
+  background-color: #0056b3;
+}
+
+@media(max-width: 500px){
+  .Communal {
+    margin-top: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 2px;
+    text-align: right;
+  }
+  
+  .communalimg {
+    display: flex;
+    align-items: center;
+    grid-row: 1/2;
+  }
+  
+  .communalimg img {
+    width: 100%;
+    height: 300px;
+    margin-left: 0px;
+
+  }
+  
+  .communalteks {
+    width: 100%;
+    text-align: right;
+    margin-left: 0px;
+  }
+  .communalteks h2{
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .btncommunal {
+    margin-right: 0px;
+  }
+}
+
+.CO-Working_Space {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  text-align: justify;
+  margin-bottom: 5%;
+}
+
+.coworkingimg {
+  display: flex;
+  align-items: center;
+}
+
+.coworkingimg img {
+  width: 100%;
+  height: 350px;
+  max-width: 100%;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.coworkingtext {
+  text-align: justify;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.btncoworking {
+  text-align: right;
+  justify-content: right;
+  margin-top: 20px;
+  margin-right: 50px;
+  font-family: "Truculenta";
+}
+
+.btnpeminjamanCOWOR {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Truculenta";
+}
+
+.btnpeminjamanCOWOR:hover {
+  background-color: #0056b3;
+}
+
+.btndetailCOWOR {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Truculenta";
+}
+
+.btndetailCOWOR:hover {
+  background-color: #0056b3;
+}
+
+@media(max-width: 500px){
+  .CO-Working_Space {
+    margin-top: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 2px;
+  }
+  
+  .coworkingimg {
+    display: flex;
+    align-items: start;
+  }
+  
+  .coworkingimg img {
+    width: 100%;
+    height: 300px;
+    margin-left: 0px;
+  }
+  
+  .coworkingtext {
+    margin-left: 0px;
+    text-align: left;
+  }
+  
+  .btncoworking {
+    width: auto;
+    display: flex;
+    text-align: right;
+    justify-content: left;
+    margin-right: 0px;
+    margin-top: 10px;
+    padding-left: 10px;
+    column-gap: 10px;
+  }
+}
+
+.Ruang_Cuci_Jemur {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  text-align: justify;
+  margin-bottom: 5%;
+}
+
+.cucijemurimg {
+  display: flex;
+  align-items: center;
+}
+
+.cucijemurimg img {
+  width: 95%;
+  height: 390px;
+  max-width: 100%;
+  border-radius: 40px;
+  box-sizing: border-box;
+
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.cucijemurtext {
+  text-align: justify;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.btncucijemur {
+  text-align: right;
+  justify-content: right;
+  margin-top: 20px;
+  margin-right: 50px;
+  font-family: "Truculenta";
+}
+
+.btnpeminjamancucijemur {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Truculenta";
+}
+
+.btnpeminjamancucijemur:hover {
+  background-color: #0056b3;
+}
+
+.btndetailcucijemur {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Truculenta";
+}
+
+.btndetailcucijemur:hover {
+  background-color: #0056b3;
+}
+
+@media(max-width: 500px){
+  .Ruang_Cuci_Jemur {
+    margin-top: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 2px;
+    text-align: right;
+  }
+  
+  .cucijemurimg {
+    display: flex;
+    align-items: center;
+    grid-row: 1/2;
+  }
+  
+  .cucijemurimg img {
+    width: 100%;
+    height: 300px;
+    margin-left: 0px;
+
+  }
+  
+  .cucijemurtext {
+    width: 100%;
+    text-align: right;
+    margin-left: 0px;
+  }
+  .cucijemurtext h2{
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .btncucijemur {
+    margin-right: 0px;
+  } 
+}
