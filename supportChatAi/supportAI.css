@@ -480,3 +480,10 @@
         line-height: 8px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .mainContent{
+        margin: 130px 20px 28px 20px;
+        padding: 9vh 3.5vh 4.8vh 3.5vh;
+    }
+}
