@@ -60,6 +60,7 @@ body{
 }
 #myRTB-logo img{
     height: 45px;
+    display: none;
 }
 #myRTB-logo p{
     font-size: 45px;
