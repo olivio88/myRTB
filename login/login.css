@@ -252,6 +252,18 @@ body {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .mainContent{
+        margin-top: 130px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 3.5vh;
+        padding-right: 3.5vh;
+    }
+}
+
+
+
 @media screen and (max-width: 350px) {
     .rtbIMG{
         width: 150px;
