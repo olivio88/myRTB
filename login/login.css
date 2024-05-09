@@ -3,6 +3,10 @@
     src: url(./Font/BebasNeue-Regular.otf);
 }
 
+.header{
+    min-height: 0 !important;   
+}
+
 body {
     overflow-x: hidden;
 }
