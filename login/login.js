@@ -21,10 +21,12 @@ function validated() {
     }
 
     // Check if username and password match the expected values
+    /*
     if (username !== "Budi Tabuti" || password !== "1234") {
         submit_error.style.display = "block";
         return false;
     }
+    */
 
     // If everything is valid, redirect to another HTML page
     get_userdata(username);
