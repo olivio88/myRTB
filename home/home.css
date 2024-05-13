@@ -276,7 +276,7 @@ h3{
     display: flex;
     align-items: center;
     gap: 10px;
-    top: 15px;
+    top: 20px;
     right: -165px;
     margin: 0;
     padding: 8px 16px;
@@ -299,7 +299,7 @@ h3{
     align-items: center;
     flex-direction: row-reverse;
     gap: 10px;
-    top: 15px;
+    top: 20px;
     left: -165px;
     margin: 0;
     padding: 8px 16px;
